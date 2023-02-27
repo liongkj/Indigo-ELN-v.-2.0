@@ -2,9 +2,9 @@ FROM maven:3-alpine as builder
 
 # RUN apk update && apk add git
 # RUN git clone https://github.com/liongkj/Indigo-ELN-v.-2.0.git
-# WORKDIR Indigo-ELN-v.-2.0
+WORKDIR Indigo-ELN-v.-2.0
 # RUN git checkout indigo-eln-bingodb
-COPY . .
+COPY . ./Indigo-ELN-v.-2.0
 RUN mvn clean package -P release
 FROM openjdk:8-jre
 
