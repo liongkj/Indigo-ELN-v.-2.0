@@ -1,7 +1,7 @@
 FROM node:7-alpine
 
 RUN apk update && apk add git
-RUN git clone https://github.com/epam/Indigo-ELN-v.-2.0.git
+RUN git clone https://github.com/liongkj/Indigo-ELN-v.-2.0.git
 WORKDIR Indigo-ELN-v.-2.0
 RUN git checkout indigo-eln-ui
 RUN npm install
