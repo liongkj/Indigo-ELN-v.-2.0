@@ -9,7 +9,7 @@ RUN mvn clean package -P release
 FROM openjdk:8-jre
 
 WORKDIR /opt/jars
-COPY --from=builder Indigo-ELN-v.-2.0/target/bingodb.war bingodb.war
+COPY --from=builder target/bingodb.war bingodb.war
 
 EXPOSE 9999
 ENTRYPOINT java -jar bingodb.war
